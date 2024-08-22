@@ -49,27 +49,27 @@ const logos: Logo[] = [
 ]
 
 const ClientLogos: React.FC = () => {
-  return (
-    <section className='bg-blushPink'>
-        <div className='lg:container mx-auto px-4'>
-            <div className='flex items-center justify-around px-4 py-12'>
-                {logos.map((logo, index) => (
-                    <div
-                      key={index}
-                      className={`flex max-w-full aspect-[${logo.width}/${logo.height}]`}
-                    >
-                        <Image 
-                            src={logo.src}
-                            alt={logo.alt}
-                            width={logo.width}
-                            height={logo.height}
-                        />
-                    </div>
-                ))}
+    return (
+        <section className='bg-blushPink'>
+            <div className='lg:container mx-auto px-4'>
+                <div className='flex items-center justify-around px-4 py-12'>
+                    {logos.map((logo, index) => (
+                        <div
+                            key={index}
+                            className={`flex max-w-full aspect-[${logo.width}/${logo.height}]`}
+                        >
+                            <Image
+                                src={logo.src}
+                                alt={logo.alt}
+                                width={logo.width}
+                                height={logo.height}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-  )
+        </section>
+    )
 }
 
 export default ClientLogos
